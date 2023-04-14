@@ -55,7 +55,7 @@
           <button
             class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600  rounded text-lg " @click="signUp"
           >
-            Button
+           Sign Up
           </button>
           <p class=" text-blue-500 hover:text-blue-900 hover:underline  mt-3 text-lg text-right">
            <!-- give router a link to go to log in page -->

@@ -42,7 +42,7 @@
           <button
             class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600  rounded text-lg " @click="signIn"
           >
-            Button
+            Log In
           </button>
           <p class=" text-blue-500 hover:text-blue-900 hover:underline  mt-3 text-lg text-right">
            <!-- give router a link to go to log in page -->
@@ -60,18 +60,18 @@ export default{
     name: "LogIn",
     data(){
         return{
-            email: 'Bilala@gmail.com',
-            password:'bilal234'
+            email:'',
+            password:''
         }
 
     },
     methods: {
       async  signIn(){
             let result=await axios.get(`http://localhost:3000/user?email=${this.email}&password=${this.password}`)
-           
-            if(result.status==200){
+              console.log(result.data.length);
+            if(result.status==200 && result.data.length){
                 
-                localStorage.setItem("user-info",JSON.stringify(result.data))
+                localStorage.setItem("user-info",JSON.stringify(result.data[0]))
                 
                 this.$router.push({name: 'Home'})
 

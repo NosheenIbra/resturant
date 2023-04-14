@@ -2,7 +2,7 @@
     <div class="h-screen">
       <Header />
       
-          <h1>Hello {{ UserName }}, in home page</h1>
+          <h1>Hello;user On Add resturant page</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facere consectetur nisi rem? Dicta amet temporibus optio mollitia eligendi eaque modi expedita! Adipisci incidunt facere in laboriosam quisquam quia dolorum.</p>
   </div>
 
@@ -10,19 +10,10 @@
 <script>
 import Header from './Header.vue'
 export default{
-    name: "Home",
-    data(){
-      return{
-        UserName : '',
-      }
-
-    },
+    name: "Add",
     // now home page will check is there no user then go to sign up pag
     mounted(){
       let user = localStorage.getItem("user-info")
-      // json.parse change json value into js while json.stringify change js value into json
-      this.UserName =JSON.parse(user).name;
-      console.log( user );
       if(!user){
         this.$router.push({name: 'LogIn'})
       }
