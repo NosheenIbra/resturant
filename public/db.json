@@ -3,6 +3,27 @@
     {
       "name":"ibra nosheen", "email": "ibranosheen560@gmail.com", "password":"123", "id": 1
     }
+  ],
+  "resturants":[
+    {
+      "id" : 1,
+      "name": "thing",
+      "contact" : "123456789",
+      "address" : "dhjgfsdtuofsehio"
+    },
+    {
+      "id" : 2,
+      "name": "Burger king",
+      "contact" : "453r",
+      "address" : "runjoic"
+    },
+    {
+      "id" : 3,
+      "name": "roast",
+      "contact" : "2222222",
+      "address" : "fish man"
+    }
   ]
+  
 
 }
